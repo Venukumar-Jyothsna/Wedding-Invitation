@@ -569,6 +569,10 @@
         audio.muted = false;  // unmute after click
         audio.play();
       }
+      setTimeout(() => {
+        audio.pause();
+        audio.currentTime = 0; // reset position
+      }, 30000); 
     });
   </script>
 </body>
